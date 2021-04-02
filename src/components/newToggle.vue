@@ -9,8 +9,8 @@
       <ul>
         <li><a href="#home" @click="handleToggle">Home</a></li>
         <li><a href="#about" @click="handleToggle">About</a></li>
-        <li><a href="#services" @click="handleToggle">Services</a></li>
-        <li><a href="#work" @click="handleToggle">Work</a></li>
+        <li><a href="#skills" @click="handleToggle">Skills</a></li>
+        <li><a href="#projects" @click="handleToggle">Projects</a></li>
         <li><a href="#contact" @click="handleToggle">Contack</a></li>
       </ul>
     </div>

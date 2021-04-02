@@ -21,21 +21,6 @@
           <h2>Web Design</h2>
           <p>Hillle cotanumatill abc . Allick Htck to fill lidk . 23s1f23s. sdfavs.</p>
         </div>
-        <div class="servicesBx">
-          <img src="../assets/icon1.png" />
-          <h2>Web Design</h2>
-          <p>Hillle cotanumatill abc . Allick Htck to fill lidk . 23s1f23s. sdfavs.</p>
-        </div>
-        <div class="servicesBx">
-          <img src="../assets/icon1.png" />
-          <h2>Web Design</h2>
-          <p>Hillle cotanumatill abc . Allick Htck to fill lidk . 23s1f23s. sdfavs.</p>
-        </div>
-        <div class="servicesBx">
-          <img src="../assets/icon1.png" />
-          <h2>Web Design</h2>
-          <p>Hillle cotanumatill abc . Allick Htck to fill lidk . 23s1f23s. sdfavs.</p>
-        </div>
       </div>
     </section>
   </div>

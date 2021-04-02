@@ -5,8 +5,8 @@
       <ul>
         <li><a href="#home" v-on:click="handleToggle">Home</a></li>
         <li><a href="#about" v-on:click="handleToggle">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#work" v-on:click="handleToggle">Work</a></li>
+        <li><a href="#skills" v-on:click="handleToggle">Skills</a></li>
+        <li><a href="#projects" v-on:click="handleToggle">Projects</a></li>
         <li><a href="#contact" v-on:click="handleToggle">Contack</a></li>
       </ul>
     </div>

@@ -4,9 +4,8 @@
     <Banner />
     <About />
     <Skills />
-    <Services />
-    <Work />
-    <Contact />
+    <Projects />    
+    <Contact />    
   </div>
 </template>
 
@@ -14,26 +13,27 @@
 import Toggle from './components/newToggle.vue';
 import Banner from './components/Banner.vue';
 import About from './components/About.vue';
-import Services from './components/Services.vue';
-import Work from './components/Work.vue';
+// import Services from './components/Services.vue';
+// import Work from './components/Work.vue';
 import Contact from './components/Contact.vue';
 import Skills from './components/Skills.vue';
+import Projects from './components/Projects.vue';
 
 export default {
   name: 'App',
   components: {
     Toggle,    
     Banner,
-    About,
-    Services,
-    Work,
+    About,    
     Contact,
     Skills,
+    Projects,
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +52,7 @@ section {
   min-height: 100vh;
 }
 
-p {
+p, pre {
   font-size: 1.1em;
   margin: 20px 0;
   font-weight: 300;

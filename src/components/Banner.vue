@@ -2,12 +2,12 @@
   
     <section class="banner" id="home">
       <div class="imgSidebar">
-        <img src="../assets/test.jpg" />
+        <img src="../assets/picOne.jpg" />
       </div> 
       <div class="contentBx">       
         <div>
           <h4><span>Hello</span> I'm</h4>
-          <h2>Chou Man Chun</h2>
+          <h2>周 蔓 君</h2>
           <h4>I'm a Front End Web Developer.</h4>
           <p></p>
         </div>
@@ -91,6 +91,7 @@ $lightblue : #00bcd4;
     }
 
     h2 {
+      font-family:  DFKai-SB, STKaiti, Avenir, Helvetica, Arial, sans-serif;
       color: $gray;
       font-size: 3em;
       line-height: 1em;

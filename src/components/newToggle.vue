@@ -31,7 +31,7 @@ export default {
 
         window.addEventListener("scroll", () => {
           let scrollTop = document.documentElement.scrollTop;
-          if (scrollTop > windowHeight) {
+          if (scrollTop > windowHeight - 1) {
             scrollFlag.value = true;
             active.value = false;
           } else {
@@ -47,14 +47,15 @@ export default {
       });
     });
 
-    const handleToggle = () => {
-      active.value = false;
+    const handleToggle = () => {      
+      setTimeout(()=>active.value = false, 150);      
     };
+    
 
     return {
       active,
       scrollFlag,
-      handleToggle,
+      handleToggle
     };
   },
 };

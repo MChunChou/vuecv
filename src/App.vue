@@ -13,8 +13,6 @@
 import Toggle from './components/newToggle.vue';
 import Banner from './components/Banner.vue';
 import About from './components/About.vue';
-// import Services from './components/Services.vue';
-// import Work from './components/Work.vue';
 import Contact from './components/Contact.vue';
 import Skills from './components/Skills.vue';
 import Projects from './components/Projects.vue';
@@ -144,4 +142,5 @@ p, pre {
     margin: 10px 0;
   }
 }
+
 </style>

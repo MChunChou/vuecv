@@ -116,6 +116,15 @@ $lightblue : #00bcd4;
   }
 }
 
+@media(max-width: 500px) {
+  .banner {
+      .contentBx {
+        padding: 40px 63px;
+        padding-top: 188px;
+      }
+  }
+}
+
 @media print {
  .banner {
     &:before {

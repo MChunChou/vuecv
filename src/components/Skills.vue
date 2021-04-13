@@ -219,11 +219,10 @@ export default {
         height: 80%;
         width: 100%;
         background: white;
-        
+
         &:hover {
           opacity: 0;
           transition: 0.5s;
-
         }
 
         h3 {
@@ -289,9 +288,9 @@ export default {
         .card {
           height: 95%;
           width: 100%;
-          padding: 0;          
+          padding: 0;
           .cardBx {
-            ul {              
+            ul {
               li {
                 margin: 3px;
                 padding: 0px;
@@ -302,6 +301,23 @@ export default {
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .skills {
+    .content {
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      left: 20px;
+      .skillBx {
+        padding: 0;
+      }
+      .card {
+        display: none;
       }
     }
   }

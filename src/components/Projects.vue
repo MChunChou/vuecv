@@ -79,7 +79,7 @@ export default {
         url: "",
       },
     ];
-    console.log(projectsData)
+    console.log(projectsData);
     return {};
   },
 };
@@ -123,9 +123,6 @@ $cerulean-frost: rgba(89, 152, 197, 1);
           font-size: 20px;
           font-weight: 600;
         }
-
-        p {
-        }
       }
 
       .describe {
@@ -164,6 +161,55 @@ $cerulean-frost: rgba(89, 152, 197, 1);
           a {
             display: block;
             color: $linen;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .projects {
+    .content {
+      .projectBx {
+        position: relative;
+        padding: 10px;
+        margin: 5px;
+        min-width: 100%;
+        min-height: 350px;
+        .name {
+          img {
+            width: 90%;
+            object-fit: contain;
+          }
+        }
+
+        .describe {
+          padding: 0;
+          width: 100%;
+          left: 0;
+          color: black;
+
+          p,
+          pre,
+          a {
+            margin: 0;
+            display: block;
+            color: black;
+            white-space: break-spaces;
+          }
+        }
+
+        &:hover {
+          display: block;
+          background: $linen;
+          color: black;
+           .describe {
+            p,
+            pre,
+            a {
+              color: black;
+            }
           }
         }
       }

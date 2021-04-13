@@ -1,9 +1,9 @@
 <template>
   <div
     class="toggle"
-    v-bind:class="{ scroll: scrollFlag, active: active }"
-    @mouseover="active = true"
-    @mouseleave="active = false"
+    v-bind:class="{ scroll: scrollFlag, active: active }"   
+    @mouseleave="active=false" 
+    @click="active=!active"      
   >
     <div class="sidebar">
       <ul>
@@ -21,20 +21,24 @@ import { ref, onBeforeUnmount, onMounted } from "vue";
 
 export default {
   setup() {
-    const scrollFlag = ref(false);
-    const active = ref(true);
-    onMounted(() => {
-      const windowHeight = document.documentElement.clientHeight;
+    const windowWidth = document.documentElement.clientWidth;
+    const scrollFlag = ref(windowWidth < 500 ? true : false);
+    const active = ref(windowWidth < 500 ? false : true);
 
-      window.addEventListener("scroll", () => {
-        let scrollTop = document.documentElement.scrollTop;
-        if (scrollTop > windowHeight) {
-          scrollFlag.value = true;
-          active.value = false;
-        } else {
-          scrollFlag.value = false;
-        }
-      });
+    onMounted(() => {
+      if (windowWidth > 500) {
+        const windowHeight = document.documentElement.clientHeight;
+
+        window.addEventListener("scroll", () => {
+          let scrollTop = document.documentElement.scrollTop;
+          if (scrollTop > windowHeight) {
+            scrollFlag.value = true;
+            active.value = false;
+          } else {
+            scrollFlag.value = false;
+          }
+        });
+      }
     });
 
     onBeforeUnmount(() => {
@@ -162,13 +166,13 @@ $cerulean-frost: rgba(89, 152, 197, 1);
     }
 
     &.scroll {
-      left: calc(-1 * 80% + 50px);   
+      left: calc(-1 * 80% + 50px);
 
       &.active {
-        background: $onyx;        
+        background: $onyx;
         left: 0;
         width: 80%;
-        
+
         .sidebar {
           display: flex;
         }
@@ -176,22 +180,50 @@ $cerulean-frost: rgba(89, 152, 197, 1);
         &:after {
           background: rgba(0, 0, 0, 0);
         }
-      }   
-      
+      }
     }
 
     &.active {
-        background: $onyx;        
-        left: 0;
-        width: 80%;
-        
-        .sidebar {
-          display: flex;
-        }
+      background: $onyx;
+      left: 0;
+      width: 80%;
 
-        &:after {
-          background: rgba(0, 0, 0, 0);
-        }
+      .sidebar {
+        display: flex;
+      }
+
+      &:after {
+        background: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .toggle {
+    // display: none;
+
+    left: calc(-1 * 100% + 50px);
+
+    width: 100%;
+
+    
+    &::after {      
+      top: calc(100% - 41px);    
+    }
+
+    &.scroll {
+      left: calc(-1 * 100% + 50px);
+      top: calc(-1 * 100%  + 49px);
+
+      &.active {
+        width: 100%;
+        top: 0;
+      }
+    }
+
+    &.active {
+      width: 100%;
     }
   }
 }

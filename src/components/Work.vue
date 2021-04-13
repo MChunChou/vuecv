@@ -114,6 +114,6 @@ export default {
   font-size: 1em;
 }
 
-    @media (max-width: 991px) {
-    }
+@media (max-width: 991px) {
+}
 </style>

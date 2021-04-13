@@ -219,4 +219,26 @@ export default {
     width: 100%;
   }
 }
+
+@media (max-width: 500px) {
+  .contact {
+
+    .row {
+      flex-direction: column;
+    }
+
+    
+    .contactBx {
+      width: 100%;
+      margin: 3px;
+      .col50 {
+        margin: 10px 0;
+        width: 100%;                 
+        h3 {
+          font-size: 0.7em;
+        }
+      }
+    }
+  }
+}
 </style>

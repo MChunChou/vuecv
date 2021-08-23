@@ -7,13 +7,12 @@
       </div>
       <div class="content">
         <div class="textBx">
-          <p>
-            {{ aboutCtn }}
-          </p>
+          <pre>{{ aboutCtn }}</pre>
         </div>
-        <div class="imgBx">
-          <img src="../assets/picTwo.jpg" />
-        </div>
+        <div class="textBx">
+          <!-- <img src="../assets/picTwo.jpg" /> -->
+          <pre>{{ aboutWork }}</pre>
+        </div> 
       </div>
     </section>
   </div>
@@ -23,13 +22,59 @@
 export default {
   name: "About",
   setup() {
-    const aboutCtn = `畢業於逢甲大學，在學校中畢業專題選擇使用 JAVA 開發以圖形辨識的方法來辨識鋼琴樂譜並且依據此樂譜來撥放出 midi 音樂，在專題製作中雖然經歷很多的挫折跟失敗，但也讓我學習到如何去思考並且解決問題。    
-     畢業後的工作，進入一間 CNC 軟體開發的公司。主要負責的工作是 CNC 控制器的操作人機介面，使用 Web 方式取代掉原本使用 JAVA 開發的介面。開發語言使用 NodeJS 做為後端並與控制器溝通，前端畫面則使用 YUI Mojito 開發，後來改用 ReactJS。
-     之後接到另一個工作是負責雲端管理系統，內容包含登入、查詢、顯示、上傳、新增、刪除的功能，使用 ReactJS 開發前端，並使用 Rust 開發後端，資料庫則是使用PostgreSQL。
-     短期內目標試希望能夠完整掌握目前各項前端技能，並且深入了解後端架構，期望未來可以成為獨當一面的全端工程師。`;
+    const aboutCtn = 
+`Hi 我是周蔓君
+
+台南人，畢業於逢甲大學，有8年前後端的開發經驗。
+熟系HTML5、Javascript、CSS、React，能獨立進行開發以及切版的工作。
+
+之前任職於CNC軟體控制公司，負責的工作是開發網頁式 CNC 控制器人機介面。
+在開發的過程中不斷與團隊以及使用者溝通和確認，以避免出現 "以為" 跟 "想要" 的不同。
+並且以最初開發的介面為基準，並根據不同訂單的客戶進行客製化的要求。
+
+看著自己一步一步寫出來的介面，搭配著各種API，彷彿創造一個新的天地，因此得了極大的成就感。
+也因此奠定自己想要成為一個獨當一面的全端工程師的期望。
+
+目前短期的目標是希望能夠掌握目前各種前端的技能 如 VueJS, React Hook ... 等，
+並逐步加深對後端架構的了解，期望未來可以成為獨當一面的全端工程師。
+`;
+
+  const aboutWork = `
+  工作經歷:
+
+  [ CNC控制器網頁式人機介面 ] 
+    ‧ 開發網頁式 CNC 人機操作介面，取代 JAVA 介面。
+    ‧ CNC 資訊顯示、控制選單以及操作介面‧
+    ‧ CNC 程式編輯以及模擬系統‧
+    ‧ 檔案上傳以及下載功能
+
+    FrontEnd: #YUI Mojito #ReactJS #ThreeJS #PEGJS
+    BackEnd: #NodeJS #Express    
+
+  [ EtherCAT 控制器試算表格式人機介面 ]
+    ‧ 表格式動態顯示及操作功能
+    ‧ 雲端 FTP 下載更新功能
+    ‧ 使用 WebSocket 與控制器溝通
+
+    FrontEnd: #ReactJs #Redux #WebSocket #React Virtualized #Material UI    
+    BackEnd: #Node #Express
+
+  [ 雲端表單管理系統 ]
+    ‧ 使用者的登入、新增、刪除以及權限修改
+    ‧ 資料庫的查詢並且顯示表單，並提共下載成CSV檔案
+    ‧ 上傳更新檔案至雲端
+    ‧ 使用 GraphQL 方式與 Back End 的溝通
+    ‧ 提供使用語言判斷，並切換語系
+
+    FrontEnd: #ReactJs #Redux #GraphQL #Material UI #i18next
+    BackEnd: #Rust #Postgresql     
+  `;
+
     return {
       aboutCtn,
+      aboutWork
     };
+    
   },
 };
 </script>
@@ -44,14 +89,17 @@ $black: #000;
 
   .content {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: center;
     margin-top: 40px;
 
     .textBx {
       min-width: 49%;
       width: 49%;
-      p {
+      p , pre {        
         color: #fff;
+        white-space: pre-wrap;
+        font-size: 1.3em;
       }
     }
 

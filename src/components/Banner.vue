@@ -65,6 +65,7 @@ $lightblue : #00bcd4;
       height: 250px;
       object-fit: cover;
       border-radius: 125px;
+      // object-position: 0 -31px;
     }
   }
 

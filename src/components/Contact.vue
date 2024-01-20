@@ -5,15 +5,15 @@
       <p></p>
     </div>
     <div class="contactBx">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col50">
           <img src="../assets/cellphone.png" />
           <h3>Tel:</h3>
         </div>
         <div class="col50">
-          <h3>0972303633</h3>
+          <h3></h3>
         </div>
-      </div>
+      </div> -->
       <div class="row">
         <div class="col50">
           <img src="../assets/email.png" />
@@ -78,7 +78,7 @@
 <script>
 /* eslint-disable */
 
-import mailHelper from "mailHelper";
+//import mailHelper from "mailHelper";
 import { reactive, watch } from "vue";
 
 export default {
@@ -104,7 +104,7 @@ export default {
         Mobile: ${mobile}
         Msg: ${msg}`;
 
-        mailHelper(content);
+        //mailHelper(content);
       },
       emailData,
     };

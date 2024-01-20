@@ -1,5 +1,4 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'
-    ? '/vuecv/'
-    : '/'    
-}
+  publicPath: process.env.NODE_ENV === "production" ? "/vuecv/" : "/",
+  base: "/vuecv/",
+};
